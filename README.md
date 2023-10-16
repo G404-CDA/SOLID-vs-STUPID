@@ -12,10 +12,14 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
 
 ## Cours
 [Présentation SOLID vs Stupid](https://docs.google.com/presentation/d/12pJqlgKcQk1-v65I_ifbRRzJGlwcG3cw0hy3A9p619U/edit?usp=sharing)
+
 [Ntier + Clean Architecture](https://docs.google.com/presentation/d/1NQWhYr5Y7tRikUP4DuvCoVVzAakeTdboNDvciyO5rMM/edit#slide=id.p)
 ## Livecodes
 
+
+
 ## Exercices
+
 
 ## Ressources
 
@@ -66,7 +70,7 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
  - **D:** Duplication
 
 ### ⛑️ Programmation SOLID
-🎯 SOLID EST UN OUTIL ET NON UN BUT !!!
+  **🎯 SOLID EST UN OUTIL ET NON UN BUT !!!**
 
  - **S:** Séparation des responsabilités
  - **O:** Principe Ouvert / Fermé
