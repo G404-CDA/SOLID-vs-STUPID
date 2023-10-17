@@ -15,7 +15,100 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
 
 [Ntier + Clean Architecture](https://docs.google.com/presentation/d/1NQWhYr5Y7tRikUP4DuvCoVVzAakeTdboNDvciyO5rMM/edit#slide=id.p)
 ## Livecodes
+  <details>
+    <summary><b>Livecode Soldat + Personnage</b></summary>
 
+      ```php
+      
+          <?php
+
+            // ARCHI LARAVEL
+
+            abstract class EloquentRepository implements RepositoryInterface{
+
+                protected string $model = '';
+                
+                public function setModel($model){
+                    $this->model = $model;
+                }
+                
+                public function transform(object $data){
+                    return (array) $data;
+                }
+                
+            }
+
+            class QuestionEloquentRepository extends EloquentRepository implements RepositoryInterface
+            {
+                
+                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+                
+                public function save($data)
+                {
+                    //does something
+                }
+            }
+
+            class AnswerEloquentRepository extends EloquentRepository implements RepositoryInterface
+            {
+
+                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+
+                public function save($data)
+                {
+                    //does something
+                }
+            }
+
+            // ARCHI AUTRE FRAMEWORK
+
+            abstract class DoctrineRepository implements RepositoryInterface{}
+
+            class QuestionDoctrineRepository extends DoctrineRepository implements RepositoryInterface
+            {
+                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+                
+                public function save($data)
+                {
+                    //does something
+                }
+            }
+
+            class AnswerDoctrineRepository extends DoctrineRepository implements RepositoryInterface
+            {
+                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+                public function save($data)
+                {
+                    //does something
+                }
+            }
+
+            //--- DANS MON CONTROLLER ARCHI
+            $question = new Question();
+
+            //Si archi Laravel
+            $question->save(new QuestionEloquentRepository);
+
+            //Si archi doctrine
+            $question->save(new QuestionDoctrineRepository);
+
+            //--- CODE METIER - CODE BUSINESS - CODE DOMAIN
+
+            interface RepositoryInterface{
+                public function save();
+            }
+
+            class Question 
+            {
+                public function save(RepositoryInterface $repository)
+                {
+                    $repository->save($this);
+                }
+            }
+      ```
+
+  </details>
+  
 
 
 ## Exercices
