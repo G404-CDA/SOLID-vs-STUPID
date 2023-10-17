@@ -19,92 +19,91 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
     <summary><b>Livecode Soldat + Personnage</b></summary>
 
       ```php
-      
-          <?php
+        <?php
 
-            // ARCHI LARAVEL
+          // ARCHI LARAVEL
 
-            abstract class EloquentRepository implements RepositoryInterface{
+          abstract class EloquentRepository implements RepositoryInterface{
 
-                protected string $model = '';
-                
-                public function setModel($model){
-                    $this->model = $model;
-                }
-                
-                public function transform(object $data){
-                    return (array) $data;
-                }
-                
-            }
+              protected string $model = '';
+              
+              public function setModel($model){
+                  $this->model = $model;
+              }
+              
+              public function transform(object $data){
+                  return (array) $data;
+              }
+              
+          }
 
-            class QuestionEloquentRepository extends EloquentRepository implements RepositoryInterface
-            {
-                
-                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
-                
-                public function save($data)
-                {
-                    //does something
-                }
-            }
+          class QuestionEloquentRepository extends EloquentRepository implements RepositoryInterface
+          {
+              
+              /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+              
+              public function save($data)
+              {
+                  //does something
+              }
+          }
 
-            class AnswerEloquentRepository extends EloquentRepository implements RepositoryInterface
-            {
+          class AnswerEloquentRepository extends EloquentRepository implements RepositoryInterface
+          {
 
-                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+              /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
 
-                public function save($data)
-                {
-                    //does something
-                }
-            }
+              public function save($data)
+              {
+                  //does something
+              }
+          }
 
-            // ARCHI AUTRE FRAMEWORK
+          // ARCHI AUTRE FRAMEWORK
 
-            abstract class DoctrineRepository implements RepositoryInterface{}
+          abstract class DoctrineRepository implements RepositoryInterface{}
 
-            class QuestionDoctrineRepository extends DoctrineRepository implements RepositoryInterface
-            {
-                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
-                
-                public function save($data)
-                {
-                    //does something
-                }
-            }
+          class QuestionDoctrineRepository extends DoctrineRepository implements RepositoryInterface
+          {
+              /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+              
+              public function save($data)
+              {
+                  //does something
+              }
+          }
 
-            class AnswerDoctrineRepository extends DoctrineRepository implements RepositoryInterface
-            {
-                /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
-                public function save($data)
-                {
-                    //does something
-                }
-            }
+          class AnswerDoctrineRepository extends DoctrineRepository implements RepositoryInterface
+          {
+              /*PLEIN D'AUTRES METHODES COMMUNES AUX DEUX REPOSITORIES*/
+              public function save($data)
+              {
+                  //does something
+              }
+          }
 
-            //--- DANS MON CONTROLLER ARCHI
-            $question = new Question();
+          //--- DANS MON CONTROLLER ARCHI
+          $question = new Question();
 
-            //Si archi Laravel
-            $question->save(new QuestionEloquentRepository);
+          //Si archi Laravel
+          $question->save(new QuestionEloquentRepository);
 
-            //Si archi doctrine
-            $question->save(new QuestionDoctrineRepository);
+          //Si archi doctrine
+          $question->save(new QuestionDoctrineRepository);
 
-            //--- CODE METIER - CODE BUSINESS - CODE DOMAIN
+          //--- CODE METIER - CODE BUSINESS - CODE DOMAIN
 
-            interface RepositoryInterface{
-                public function save();
-            }
+          interface RepositoryInterface{
+              public function save();
+          }
 
-            class Question 
-            {
-                public function save(RepositoryInterface $repository)
-                {
-                    $repository->save($this);
-                }
-            }
+          class Question 
+          {
+              public function save(RepositoryInterface $repository)
+              {
+                  $repository->save($this);
+              }
+          }
       ```
 
   </details>
