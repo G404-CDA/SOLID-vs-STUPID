@@ -18,7 +18,7 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
   <details>
     <summary><b>Livecode Soldat + Personnage</b></summary>
 
-      ```php
+    ```php
         <?php
 
           // ARCHI LARAVEL
