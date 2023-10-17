@@ -17,7 +17,7 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
 ## Livecodes
 <details>
   
-  <summary><b>Livecode Soldat + Personnage</b></summary>
+  <summary><b>Séparer le code métier</b></summary>
   
   ```php
 
