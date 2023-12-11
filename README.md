@@ -103,7 +103,7 @@ Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera
 </details>
 
 ## Exercices
-
+[Exercices SOLID](https://github.com/G404-CDA/Exercices-SOLID/tree/master)
 
 ## Ressources
 
