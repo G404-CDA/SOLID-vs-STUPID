@@ -11,7 +11,7 @@ Dans ce cours, nous allons décomposer chaque principe, comprendre pourquoi il e
 Que vous soyez un développeur débutant ou expérimenté, ce cours vous donnera des outils précieux pour améliorer votre code et votre processus de développement. Préparez-vous à plonger dans le monde fascinant de la programmation SOLID :muscle: et à dire adieu aux pratiques STUPID ! 🚫
 
 ## Cours
-[Présentation SOLID vs Stupid](https://docs.google.com/presentation/d/12pJqlgKcQk1-v65I_ifbRRzJGlwcG3cw0hy3A9p619U/edit?usp=sharing)
+[Présentation SOLID vs Stupid](https://docs.google.com/presentation/d/19Nq8Tm2l-3207Shj7r-xb0ox86s_ahPqviHXON9oldk/edit?usp=sharing)
 
 [Ntier + Clean Architecture](https://docs.google.com/presentation/d/1NQWhYr5Y7tRikUP4DuvCoVVzAakeTdboNDvciyO5rMM/edit#slide=id.p)
 ## Livecodes
